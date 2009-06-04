@@ -33,7 +33,11 @@ set its value to the index page. e.g. - /Users/Me/docs/rapi/index.html?q=***
 Instant rails documentation from textmate!
 <br/>
 
-To search google for java documentation you would set *JAVA_DOC_LOCATION* to *http://google.com/search?q=**** Note the ***s, these will be replaced with the search term (i.e. your current word).
+To search google for java documentation you would set
+
+<pre>JAVA_DOC_LOCATION to http://google.com/search?q=***</pre>
+
+Note the ***s, these will be replaced with the search term (i.e. your current word).
 
 If you would rather have the documentation page launched in a browser window, you can set *OPEN_DOCS_IN_BROWSER* to *true*
 
