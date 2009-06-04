@@ -1,6 +1,7 @@
 h1. Overview
 
-A superior textmate documentation bundle (compared to my railsapi-tmbundle)
+A superior textmate documentation bundle (compared to my railsapi-tmbundle)<br>
+Picks a source of HTML documentation based on your current textmate scope, and displays it in textmate, or in your browser.
 Can be customised with offline and online sources.
 
 Press control-shift-command-h to trigger.
@@ -31,6 +32,7 @@ set its value to the index page. e.g. - /Users/Me/docs/rapi/index.html?q=***
 </pre>
 
 Instant rails documentation from textmate!
+
 <br/>
 
 To search google for java documentation you would set
@@ -38,6 +40,8 @@ To search google for java documentation you would set
 <pre>JAVA_DOC_LOCATION to http://google.com/search?q=***</pre>
 
 Note the stars, these will be replaced with the search term (i.e. your current word).
+
+<br/>
 
 If you would rather have the documentation page launched in a browser window, you can set *OPEN_DOCS_IN_BROWSER* to *true*
 
