@@ -1,0 +1,47 @@
+h1. Overview
+
+A superior textmate documentation bundle (compared to my railsapi-tmbundle)
+
+Can be customised with offline and online sources.
+
+
+h2. Install with Git:
+
+<pre>
+mkdir -p ~/Library/Application\ Support/TextMate/Bundles
+cd ~/Library/Application\ Support/TextMate/Bundles
+git clone git://github.com/gunn/EverythingDoc-tmbundle.git "EverythingDoc.tmbundle"
+osascript -e 'tell app "TextMate" to reload bundles'
+</pre>
+
+Pressing control-shift-command-h within a ruby document will now bring up a railsapi page for the current word.
+Most documents will fetch documentation from gotoapi.com
+
+
+h2. Customise:
+
+You can override the source to use for documentation.
+
+railsapi.com will let you download docs you can use with EverythingDoc:
+
+<pre>
+Download desired package from http://railsapi.com/
+Add a new shell variable from textmate's preferences - RAILS_API_LOCATION,
+set its value to the index page. e.g. - /Users/Me/docs/rapi/index.html?q=***
+</pre>
+
+Instant rails documentation from textmate!
+<br/>
+
+To search google for java documentation you would set *JAVA_DOC_LOCATION* to *http://google.com/search?q=**** Note the ***s, these will be replaced with the search term (i.e. your current word).
+
+If you would rather have the documentation page launched in a browser window, you can set *OPEN_DOCS_IN_BROWSER* to *true*
+
+
+h2. Help:
+
+Do you know of any good documentation sources that could work with this bundle? Let me know! railsapi.com, and gotoapi.com are the only ones I've found.
+
+
+Have a look at the code:
+All the interesting stuff is in - "Support/find_documentation.rb":Support/find_documentation.rb
