@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 require ENV['TM_SUPPORT_PATH']+'/lib/exit_codes'
 
+exit if !ENV['TM_CURRENT_WORD']
+
 # method to return the users preference for a language's documentation location, or nil
 def location *args
   args.each do |arg|
@@ -24,18 +26,18 @@ base_url = nil
 # loop through the scopes until we find a match, or run out.
 ENV['TM_SCOPE'].split(" ").reverse.each do |scope|
   
-  base_url = if %w[source.ruby.rails text.html.ruby text.haml].has_match? scope
+  base_url = if %w[source.ruby.rails].has_match? scope
     location("rails") || "http://railsapi.com/doc/rails-v2.3.2.1/?q=***"
   elsif %w[source.ruby].has_match? scope
     location("ruby") || "http://railsapi.com/doc/ruby-v1.8/?q=***"
   elsif %w[source.actionscript.3].has_match? scope
-    location("as3", "flex4", "flex3", "flex2", "flex") || "http://beta.gotapi.com/as/?q=***"
+    location("as3", "flex4", "flex3", "flex2", "flex") || "http://beta.gotapi.com/as?q=***"
   elsif %w[text.xml.mxml source.actionscript.3.embedded.mxml].has_match? scope
-    location("flex4", "flex3", "flex2", "flex") ||  "http://beta.gotapi.com/flex/?q=***"
-  elsif %w[text.html.basic source.css source.js].has_match? scope
-    location("html") || "http://beta.gotapi.com/html/?q=***"
+    location("flex4", "flex3", "flex2", "flex") ||  "http://beta.gotapi.com/flex?q=***"
+  elsif %w[text.html source.css source.js].has_match? scope
+    location("html") || "http://beta.gotapi.com/html?q=***"
   elsif %w[source.java].has_match? scope
-    location("java") || "http://beta.gotapi.com/java/?q=***"
+    location("java") || "http://beta.gotapi.com/java?q=***"
   end
   
   # break out if we have made a match

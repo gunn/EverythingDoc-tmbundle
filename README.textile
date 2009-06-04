@@ -1,9 +1,9 @@
 h1. Overview
 
 A superior textmate documentation bundle (compared to my railsapi-tmbundle)
-
 Can be customised with offline and online sources.
 
+Press control-shift-command-h to trigger.
 
 h2. Install with Git:
 
@@ -44,4 +44,4 @@ Do you know of any good documentation sources that could work with this bundle? 
 
 
 Have a look at the code:
-All the interesting stuff is in - "Support/find_documentation.rb":Support/find_documentation.rb
+All the interesting stuff is in - "Support/find_documentation.rb":http://github.com/gunn/EverythingDoc-tmbundle/tree/master/Support/find_documentation.rb
