@@ -37,7 +37,7 @@ To search google for java documentation you would set
 
 <pre>JAVA_DOC_LOCATION to http://google.com/search?q=***</pre>
 
-Note the ***s, these will be replaced with the search term (i.e. your current word).
+Note the stars, these will be replaced with the search term (i.e. your current word).
 
 If you would rather have the documentation page launched in a browser window, you can set *OPEN_DOCS_IN_BROWSER* to *true*
 
